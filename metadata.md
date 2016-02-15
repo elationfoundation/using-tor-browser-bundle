@@ -1,20 +1,20 @@
 ---
 search: exclude
 context:
-    @vocab: http://www.essepuntato.it/lode/http://purl.org/spar/doco
-    fabio: http://www.essepuntato.it/lode/http://purl.org/spar/fabio
-    creator: http://purl.org/dc/elements/1.1/creator
-    instructional_work: "fabio:instructional_work
-    title: http://purl.org/dc/elements/1.1/title
-    url: fabio:hasURL
-    summary: http://purl.org/spar/doco/Abstrac
+    @vocab: "http://www.essepuntato.it/lode/http://purl.org/spar/doco"
+    fabio: "http://www.essepuntato.it/lode/http://purl.org/spar/fabio"
+    creator: "http://purl.org/dc/elements/1.1/creator"
+    instructional_work: "fabio:instructional_work"
+    title: "http://purl.org/dc/elements/1.1/title"
+    url: "fabio:hasURL"
+    summary: "http://purl.org/spar/doco/Abstract"
 ---
 {
     "@context":{
-{% for item in page.context %}
-{% capture pair %}{{item[0]}}:{item[1]}}{% endcapture %}
-{{pair | jsonify }}{% unless forloop.last %},{% endunless %}
-{% endfor %}},
+               {% for item in page.context %}
+               {% capture pair %}{{item[0]}}:{item[1]}}{% endcapture %}
+               {{pair | jsonify }}{% unless forloop.last %},{% endunless %}
+               {% endfor %}},
     "@graph": [
         {% for page in site.en %}
         {% capture raw_base %}https://raw.githubusercontent.com/{{site.github.owner_name}}/{{site.github.repository_name}}{% endcapture %}
