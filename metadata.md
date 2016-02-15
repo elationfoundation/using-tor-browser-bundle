@@ -14,8 +14,7 @@ context:
     "@context":{
         {% for item in page.context %}
         {% capture pair %}{{item[0]}}:{{item[1]}}{% endcapture %}
-        {{pair | jsonify }}{% unless forloop.last %},{% endunless %}
-        {% endfor %}},
+        {{pair | jsonify }}{% unless forloop.last %},{% endunless %}{% endfor %}},
     "@graph": [
         {% for page in site.en %}
         {% capture raw_base %}https://raw.githubusercontent.com/{{site.github.owner_name}}/{{site.github.repository_name}}{% endcapture %}
