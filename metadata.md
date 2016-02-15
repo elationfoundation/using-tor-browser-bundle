@@ -41,4 +41,4 @@ search: exclude
     ]
 }
 
-{{ site.pages }}
+{{ site.documents }}
