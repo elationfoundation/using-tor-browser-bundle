@@ -10,7 +10,7 @@ context:
     summary: "http://purl.org/spar/doco/Abstract"
 ---
 {% for item in page %}
-item
+{{ item }}
 {% endfor %}
 
 {
