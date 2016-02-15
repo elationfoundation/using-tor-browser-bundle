@@ -9,9 +9,10 @@ context:
     url: "fabio:hasURL"
     summary: "http://purl.org/spar/doco/Abstract"
 ---
-{% for item in page.context %}
+{% for item in context %}
 item
 {% endfor %}
+
 {
     "@context":{
                {% for item in page.context %}
