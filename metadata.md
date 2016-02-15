@@ -12,7 +12,7 @@ context:
 {% capture newline %}
 {% endcapture %}
 {
-    "@context":{ {% for item in page.context %} {{newline}} {% capture pair %}{{item[0]}}:{{item[1]}}{% endcapture %} {{pair | jsonify }}{% unless forloop.last %},{% endunless %} {% endfor %}
+    "@context":{ {% for item in page.context %} {{newline}} {% capture pair %}{{item[0]}} : {{item[1]}}{% endcapture %} {{ pair | jsonify }}{% unless forloop.last %},{% endunless %} {% endfor %}
         }, {{newline}}
     "@graph": [ {% for page in site.en %} {% capture raw_base %}https://raw.githubusercontent.com/{{site.github.owner_name}}/{{site.github.repository_name}}{% endcapture %} {% capture item_url %}{{raw_base}}/{{site.github.build_revision}}/{{page.path}}{% endcapture %} {% if page.adids_category != null %}
         {
@@ -33,4 +33,6 @@ context:
              'title'  : {{ page.title | jsonify }},
              'last_updated'  : {{ page.last_updated | jsonify }},
              'url' : {{ item_url | jsonify}}
-             }{% unless forloop.last %},{% endunless %} {% endif %} {% endfor %} ]}
+             }{% unless forloop.last %},{% endunless %} {% endif %} {% endfor %}
+             ]
+             }
