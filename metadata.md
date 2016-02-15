@@ -9,12 +9,12 @@ context:
     url: "fabio:hasURL"
     summary: "http://purl.org/spar/doco/Abstract"
 ---
-
+{% capture newline %}
+{% endcapture %}
 {
     "@context":{
-    {% for item in page.context %} {% capture pair %}{{item[0]}}:{{item[1]}}
-    {% endcapture %}
-        {{pair | jsonify }}{% unless forloop.last %},{% endunless %} {% endfor %}
+    {% for item in page.context %} {% capture pair %}{{item[0]}}:{{item[1]}}{% endcapture %}
+        {{pair | jsonify }}{% unless forloop.last %},{% endunless %}{{newline}} {% endfor %}
         },
     "@graph": [ {% for page in site.en %} {% capture raw_base %}https://raw.githubusercontent.com/{{site.github.owner_name}}/{{site.github.repository_name}}{% endcapture %} {% capture item_url %}{{raw_base}}/{{site.github.build_revision}}/{{page.path}}{% endcapture %} {% if page.adids_category != null %}
         {
