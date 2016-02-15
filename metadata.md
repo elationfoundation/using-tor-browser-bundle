@@ -13,8 +13,10 @@ search: exclude
         "summary":"http://purl.org/spar/doco/Abstract"
     },
     "@graph": [
+        /elationfoundation/using-tor-browser-bundle/9b21f60dbd8d3e57053e7b519371d9d91534ae4a/_en/addtional_resources.md
         {% for page in site.en %}
-        {% capture item_url %}{{site.github.repository_url}}/blob/{{site.github.build_revision}}/{{page.path}}{% endcapture %}
+        {% capture raw_base %}https://raw.githubusercontent.com/{{site.github.owner_name}}/{{site.github.repository_name}}{% endcapture %}
+           {% capture item_url %}{{raw_base}}/blob/{{site.github.build_revision}}/{{page.path}}{% endcapture %}
         {% if page.adids_category != null %}
         {
              '@id' : {{ page.id | jsonify }}
