@@ -14,7 +14,7 @@ search: exclude
     },
     "@graph": [
         {% for page in site.en %}
-        {% capture item_url %}{{site.github.url}}/blob/{{site.github.build_revision}}/_posts/{{relative_path}}{% endcapture %}
+        {% capture item_url %}{{site.github.url}}/blob/{{site.github.build_revision}}/{{site.path}}{% endcapture %}
         {% if page.adids_category != null %}
         {
              '@id' : {{ page.id | jsonify }}
