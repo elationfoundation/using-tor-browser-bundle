@@ -33,4 +33,4 @@ context:
              'title'  : {{ page.title | jsonify }},
              'last_updated'  : {{ page.last_updated | jsonify }},
              'url' : {{ item_url | jsonify}}
-             }{% unless forloop.last %},{% endunless %} {% endif %} {% endfor %}]}
+             }{% unless forloop.last %},{% endunless %} {% endif %} {% endfor %} ]}
