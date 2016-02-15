@@ -40,3 +40,5 @@ search: exclude
         {% endfor %}
     ]
 }
+
+{{ site.posts }}
