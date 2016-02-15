@@ -13,8 +13,8 @@ search: exclude
         "summary":"http://purl.org/spar/doco/Abstract"
     },
     "@graph": [
-        {% for page in site.posts %}
-        {% capture item_url %}{{site.github.url}}/blob/{{site.github.build_revision}}/_posts/{{page.location}}{% endcapture %}
+        {% for page in site.en %}
+        {% capture item_url %}{{site.github.url}}/blob/{{site.github.build_revision}}/_posts/{{relative_path}}{% endcapture %}
         {% if page.adids_category != null %}
         {
              '@id' : {{ page.id | jsonify }}
@@ -40,5 +40,3 @@ search: exclude
         {% endfor %}
     ]
 }
-
-{{ site.documents }}
