@@ -36,6 +36,7 @@ search: exclude
              'last_updated'  : {{ page.last_updated | jsonify }},
              'url' : {{ item_url | jsonify}}
              }{% unless forloop.last %},{% endunless %}
-         {% endfor %}
+        {% endif %}
+        {% endfor %}
     ]
 }
