@@ -11,7 +11,7 @@ context:
 ---
 
 {% for item in page %}
-{{ item }}
+{{ item[0] }} : {{ item[1] }}
 {% endfor %}
 
 {
