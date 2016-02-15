@@ -1,7 +1,7 @@
 ---
 search: exclude
 context:
-    @vocab: "http://www.essepuntato.it/lode/http://purl.org/spar/doco"
+    vocab: "http://www.essepuntato.it/lode/http://purl.org/spar/doco"
     fabio: "http://www.essepuntato.it/lode/http://purl.org/spar/fabio"
     creator: "http://purl.org/dc/elements/1.1/creator"
     instructional_work: "fabio:instructional_work"
