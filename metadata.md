@@ -1,6 +1,7 @@
 ---
 layout: content
 title: "METADATA"
+permalink: /md/
 ---
 
 {
