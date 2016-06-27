@@ -1,5 +1,6 @@
 ---
 search: exclude
+layout: content
 ---
 {
     "@context":
