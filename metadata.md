@@ -1,5 +1,6 @@
 ---
 search: exclude
+layout: default
 context:
     "@vocab": "http://www.essepuntato.it/lode/http://purl.org/spar/doco"
     fabio: "http://www.essepuntato.it/lode/http://purl.org/spar/fabio"
